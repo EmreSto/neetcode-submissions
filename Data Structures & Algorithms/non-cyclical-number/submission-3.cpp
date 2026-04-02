@@ -1,0 +1,19 @@
+class Solution {
+public:
+    bool isHappy(int n) {
+        set<int>check_set = {};
+        while (n != 1) {
+            if (check_set.count(n)) return false;
+            check_set.insert(n);
+            int sum = 0;
+            while (n > 0) {
+                int d = n % 10;
+                sum += d * d;
+                n /= 10;
+            }
+        n = sum;
+}
+return true;
+        
+    }
+};
